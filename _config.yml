@@ -54,6 +54,3 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - README.md
-
-# Theme
-theme: minima
