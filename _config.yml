@@ -1,12 +1,12 @@
 title: Joint Centre for Disaster Research - PhD Portfolio
 description: A platform for PhD students at JCDR to showcase their research portfolios
-url: "https://your-username.github.io"
-baseurl: "/jcdr-phd-portfolio"
+url: "https://crisislab-platform.github.io"
+baseurl: "/jcdr_phd_pps"
 
 # Site author
 author:
-  name: Joint Centre for Disaster Research
-  email: jcdr@massey.ac.nz
+  name: Malintha Ranasinghe
+  email: malintha.mahindakumarage.1@uni.massey.ac.nz
 
 # Build settings
 markdown: kramdown
