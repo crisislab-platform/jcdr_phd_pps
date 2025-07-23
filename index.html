@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<div class="hero-section">
+  <div class="container">
+    <h1 class="hero-title">Joint Centre for Disaster Research</h1>
+    <p class="hero-subtitle">PhD Student Research Portfolio</p>
+    <p class="hero-description">
+      Showcasing cutting-edge research in disaster risk reduction, emergency management, 
+      and resilience building by our PhD students at Massey University and GNS Science.
+    </p>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="container">
+    <section class="about-section">
+      <h2>About JCDR</h2>
+      <p>
+        The Joint Centre for Disaster Research (JCDR) is a collaborative research centre between 
+        Massey University and GNS Science. Our PhD students conduct world-class research in 
+        disaster risk reduction, emergency management, and building community resilience.
+      </p>
+    </section>
+
+    <section class="students-section">
+      <h2>Our PhD Students</h2>
+      <div class="students-grid">
+        {% for student in site.students %}
+          <div class="student-card">
+            <div class="student-image">
+              {% if student.image %}
+                <img src="{{ student.image | relative_url }}" alt="{{ student.name }}">
+              {% else %}
+                <div class="placeholder-image">
+                  <i class="fas fa-user-graduate"></i>
+                </div>
+              {% endif %}
+            </div>
+            <div class="student-info">
+              <h3><a href="{{ student.url | relative_url }}">{{ student.name }}</a></h3>
+              <p class="research-area">{{ student.research_area }}</p>
+              <p class="supervisor">Supervisor: {{ student.supervisor }}</p>
+              <div class="year-badge">{{ student.year }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="latest-updates">
+      <h2>Latest Research Updates</h2>
+      <div class="posts-grid">
+        {% for post in site.posts limit:3 %}
+          <article class="post-card">
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p class="post-meta">{{ post.date | date: "%B %d, %Y" }} | {{ post.author }}</p>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</div>

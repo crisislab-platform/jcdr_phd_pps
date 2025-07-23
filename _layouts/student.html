@@ -1,0 +1,106 @@
+---
+layout: default
+---
+
+<div class="student-profile">
+  <div class="container">
+    <div class="student-header">
+      <div class="student-image">
+        {% if page.image %}
+          <img src="{{ page.image | relative_url }}" alt="{{ page.name }}">
+        {% else %}
+          <div class="placeholder-image">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+        {% endif %}
+      </div>
+      <div class="student-details">
+        <h1>{{ page.name }}</h1>
+        <h2>{{ page.research_area }}</h2>
+        <div class="meta-info">
+          <p><strong>Supervisor:</strong> {{ page.supervisor }}</p>
+          <p><strong>Year:</strong> {{ page.year }}</p>
+          <p><strong>Institution:</strong> {{ page.institution | default: "Massey University" }}</p>
+          {% if page.email %}
+            <p><strong>Email:</strong> <a href="mailto:{{ page.email }}">{{ page.email }}</a></p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="student-content">
+      <section class="research-overview">
+        <h3>Research Overview</h3>
+        {{ content }}
+      </section>
+
+      {% if page.publications %}
+      <section class="publications">
+        <h3>Publications</h3>
+        <ul>
+          {% for publication in page.publications %}
+            <li>
+              {% if publication.url %}
+                <a href="{{ publication.url }}" target="_blank">{{ publication.title }}</a>
+              {% else %}
+                {{ publication.title }}
+              {% endif %}
+              <span class="publication-details">{{ publication.journal }} ({{ publication.year }})</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if page.conferences %}
+      <section class="conferences">
+        <h3>Conference Presentations</h3>
+        <ul>
+          {% for conference in page.conferences %}
+            <li>
+              <strong>{{ conference.title }}</strong> - {{ conference.event }} ({{ conference.year }})
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if page.awards %}
+      <section class="awards">
+        <h3>Awards & Recognition</h3>
+        <ul>
+          {% for award in page.awards %}
+            <li>
+              <strong>{{ award.title }}</strong> - {{ award.organization }} ({{ award.year }})
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if page.skills %}
+      <section class="skills">
+        <h3>Skills & Expertise</h3>
+        <div class="skills-tags">
+          {% for skill in page.skills %}
+            <span class="skill-tag">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      {% if page.social_links %}
+      <section class="social-links">
+        <h3>Connect</h3>
+        <div class="social-buttons">
+          {% for link in page.social_links %}
+            <a href="{{ link.url }}" target="_blank" class="social-btn">
+              <i class="fab fa-{{ link.platform }}"></i> {{ link.platform | capitalize }}
+            </a>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+    </div>
+  </div>
+</div>

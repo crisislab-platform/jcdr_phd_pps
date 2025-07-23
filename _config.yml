@@ -1,0 +1,59 @@
+title: Joint Centre for Disaster Research - PhD Portfolio
+description: A platform for PhD students at JCDR to showcase their research portfolios
+url: "https://your-username.github.io"
+baseurl: "/jcdr-phd-portfolio"
+
+# Site author
+author:
+  name: Joint Centre for Disaster Research
+  email: jcdr@massey.ac.nz
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+
+# Pagination
+paginate: 6
+paginate_path: "/page:num/"
+
+# Collections for student portfolios
+collections:
+  students:
+    output: true
+    permalink: /students/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "JCDR"
+  - scope:
+      path: ""
+      type: "students"
+    values:
+      layout: "student"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Theme
+theme: minima
