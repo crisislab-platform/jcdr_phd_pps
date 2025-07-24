@@ -5,22 +5,32 @@
       {{ site.title | escape }}
     </a>
 
-    <nav class="site-nav">
-      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-      <label for="nav-trigger">
-        <span class="menu-icon">
-          <svg viewBox="0 0 18 15" width="18px" height="15px">
-            <path d="m18,1.484c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z m0,5.516c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z m0,5.516c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z"/>
-          </svg>
+    <nav class="site-nav" aria-label="Main navigation">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" aria-hidden="true" />
+      <label for="nav-trigger" class="nav-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </span>
       </label>
 
-      <div class="trigger">
-        <a class="page-link" href="{{ "/" | relative_url }}">Home</a>
-        <a class="page-link" href="{{ "/students/" | relative_url }}">Students</a>
-        <a class="page-link" href="{{ "/research/" | relative_url }}">Research</a>
-        <a class="page-link" href="{{ "/about/" | relative_url }}">About</a>
-        <a class="page-link" href="{{ "/contact/" | relative_url }}">Contact</a>
+      <div class="nav-menu">
+        <a class="nav-link" href="{{ "/" | relative_url }}">
+          <span class="nav-text">Home</span>
+        </a>
+        <a class="nav-link" href="{{ "/students/" | relative_url }}">
+          <span class="nav-text">Students</span>
+        </a>
+        <a class="nav-link" href="{{ "/research/" | relative_url }}">
+          <span class="nav-text">Research</span>
+        </a>
+        <a class="nav-link" href="{{ "/about/" | relative_url }}">
+          <span class="nav-text">About</span>
+        </a>
+        <a class="nav-link" href="{{ "/contact/" | relative_url }}">
+          <span class="nav-text">Contact</span>
+        </a>
       </div>
     </nav>
   </div>
