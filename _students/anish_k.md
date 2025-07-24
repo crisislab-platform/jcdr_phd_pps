@@ -1,7 +1,7 @@
 ---
 name: "Anish Khanal"
 research_area: "Community Resilience and Social Vulnerability"
-supervisor: "Prof. David Johnston"
+supervisor: "Associate Prof. Emma Hudson-Doyle"
 year: "2023"
 institution: "Massey University"
 email: "s.johnson@massey.ac.nz"
