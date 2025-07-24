@@ -1,11 +1,11 @@
 ---
-name: "Sarah Johnson"
+name: "Anish Khanal"
 research_area: "Community Resilience and Social Vulnerability"
 supervisor: "Prof. David Johnston"
 year: "2023"
 institution: "Massey University"
 email: "s.johnson@massey.ac.nz"
-image: "/assets/images/students/sarah-johnson.jpg"
+image: "/assets/images/students/anish_k.jpeg"
 publications:
   - title: "Social Vulnerability Assessment in Rural Communities"
     journal: "International Journal of Disaster Risk Reduction"

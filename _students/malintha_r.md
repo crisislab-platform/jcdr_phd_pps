@@ -1,11 +1,11 @@
 ---
-name: "Michael Chen"
+name: "Malintha Ranasinghe"
 research_area: "Seismic Risk Assessment and Building Vulnerability"
 supervisor: "Dr. Uma Shankar Dhakal"
 year: "2022"
 institution: "Massey University"
 email: "m.chen@massey.ac.nz"
-image: "/assets/images/students/michael-chen.jpg"
+image: "/assets/images/students/malintha_r.jpeg"
 publications:
   - title: "Machine Learning Approaches for Rapid Post-Earthquake Damage Assessment"
     journal: "Earthquake Engineering & Structural Dynamics"

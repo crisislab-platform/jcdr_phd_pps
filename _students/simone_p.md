@@ -1,11 +1,11 @@
 ---
-name: "Emma Rodriguez"
+name: "Simone Phillips"
 research_area: "Climate Change Adaptation and Coastal Hazards"
 supervisor: "Prof. Nick Horspool"
 year: "2024"
 institution: "GNS Science / Massey University"
 email: "e.rodriguez@gns.cri.nz"
-image: "/assets/images/students/emma-rodriguez.jpg"
+image: "/assets/images/students/simone_p.jpeg"
 publications:
   - title: "Sea Level Rise Projections for New Zealand Coastal Communities"
     journal: "Climate Dynamics"
